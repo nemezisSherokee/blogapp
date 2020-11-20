@@ -24,7 +24,6 @@ class CreatePost extends Component{
 
     getposts= async () => {
         const result = await API.graphql(graphqlOperation(listPosts));
-        const result2 = await API.graphql(graphqlOperation(onCre));
         // alert(JSON.stringify(result?.data?.listPosts?.items));
         this.setState( {
             posts : "",// result?.data?.listPosts?.items
