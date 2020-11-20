@@ -26,12 +26,12 @@ class CreatePost extends Component{
         const result = await API.graphql(graphqlOperation(listPosts));
         // alert(JSON.stringify(result?.data?.listPosts?.items));
         this.setState( {
-            posts : "",// result?.data?.listPosts?.items
+            posts :  result?.data?.listPosts?.items
         });
     }
 
     render(){
-        const {posts} = this.state;
+        // const {posts} = this.state;
         return (
 
             <form className="createpost">
